@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+*{
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Outfit', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p{
+  font-size: 1.6rem;
+}
+
+h1{
+  font-size: 6rem;
+}
+
+.app{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: rgba(0,0,0,0.4);
+  color: #887070c2;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.app:before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+} 
+
+.app .search{
+  text-align: center;
+  padding: 1rem;
+}
+
+.app input{
+  padding: .7rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  border: 1px solid rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.1);
+  color: #f6f2f2;
+}
+
+::placeholder{
+  color: #f8f8f8;
+}
+
+.container{
+  max-width: 700px;
+  height: 550px;
+  margin: auto;
+  padding: 0 1rem;
+  position: relative;
+  top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.app .top{
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.app .description{
+  position: relative;
+  right: -90%;
+  transform-origin: 0 0;
+  transform: rotate(269deg);
+}
+
+.app .bottom{
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.bold{
+  font-weight: 700;
+}
+
+/*media queries*/
+@media (max-width: 768px){
+  p{
+    font-size: 1.4rem;
+  }
+
+  h1{
+    font-size: 4rem;
+  }
+
+  .container{
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  .app .top,
+  .app .bottom{
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+  }
+
+  .app .description{
+    right: -80%;
+    transform: rotate(270deg);
+  }
+
+  .app input{
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    height: auto;
+    padding: 0.25rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .app .bottom {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: rgba(255,255,255,0.2);
+    flex-direction: column;
+    align-items: center;
+    margin: 0.25rem auto;
+  }
+
+  .app .bottom > div {
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+  }
+
+  .app .description {
+    right: -70%;
+    transform: rotate(270deg);
+  }
+
+  .app input {
+    font-size: 0.9rem;
+  }
+}
